@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestión de Mantenimiento de Máquinas</title>
+<link rel="icon" href="logo3.png" type="image/x-icon">
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="notificaciones" class="notificaciones"></div>
+  <h1>Gestión de Mantenimiento</h1>  
+  <img src="logo3.png" alt="Logo" class="logo">
+  <div id="footer">
+    <p id="currentDate"></p>
+  </div>
+<!-- Maquinas -->
+<!-- Memoria 1-150 Series 10-->
+<!-- Maquina 1 -->
+<div id="maquinas">
+  <div class="maquina" id="maquina1">
+    <h2>Molino The buffalo. John E, Smith Sons. Co.</h2>
+    <div class="flex-container">
+      <div class="caracteristicas">
+        <li>Nivel: 1</li>
+        <li>Voltaje: 220V</li>
+        <li>Fases: 3 </li>
+        <li>Amperaje: Null</li>
+        <li>Potencia: 15 hp Aprox</label>
+        <li>Numero de Serie: 4</label>
+        <li>Usuario: Por Definir</label>          
+        <!-- <li>Usuario: <input type="text" id="usuario1" value="Usuario B"></label> -->
+
+      </div>
+      <div class="fechas">
+        <li> <strong>Matenimiento</strong> 1</li>
+        <label for="fecha1">Cambio De Estoperos:</label>
+        <input type="date" id="fecha1">
+        <button onclick="guardarFecha(1, 24)">Guardar</button>
+        <div class="herramientas"><label>Herramienta: Bomba Para Grasa</label></div>
+        <div class="refacciones"><label>Refaccion: Grasa FM222 Grado Alimenticio</label></div>
+        <span class="dias-restantes" id="restantes1"></span>
+        
+        <li> <strong>Matenimiento</strong> 2</li>
+        <label for="fecha2">Cambio de rodamientos/Bujes:</label>
+        <input type="date" id="fecha2">
+        <button onclick="guardarFecha(2, 24)">Guardar</button>
+        <div class=" herramientas"><label>Herramienta: Llaves Combinadas SAE</label></div>
+        <div class=" refacciones"><label>Refaccion: Rodamientos/Bujes</label></div>
+        <span class="dias-restantes" id="restantes2"></span>
+
+        <li> <strong>Matenimiento</strong> 3</li>
+        <label for="fecha3">Lubricación de 6 cojinetes:</label>
+        <input type="date" id="fecha3">
+        <button onclick="guardarFecha(3, 1)">Guardar</button>
+        <div class=" herramientas"><label>Herramienta: Llaves Combinadas SAE</label></div>
+        <div class=" refacciones"><label>Refaccion: Rodamientos/Bujes</label></div>
+        <span class="dias-restantes" id="restantes3"></span>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Maquina 2 -->
+<div id="maquinas">
+  <div class="maquina" id="maquina2">                                     <!-- Modificar Memoria -->
+    <h2>Molino Torrey M-32-5</h2>
+    <div class="flex-container">
+      <div class="caracteristicas">
+        <li>Nivel: 1</label>
+        <li>Voltaje: 220V</label>
+        <li>Fases: 3 </label>
+        <li>Amperaje: 14.2A</label>
+        <li>Potencia: 5 hp</label>
+        <!-- <label>Marca: The buffalo. John E, Smith Sons. Co.</label> -->
+        <li>Numero de Serie: K21-095915</label>
+        <li>Usuario: Por Definir</label>
+      </div>
+      
+      <div class="fechas">
+
+        <li> <strong>Matenimiento</strong> 4</li>
+        <label for="fecha4">Cambio de Rodamientos a Motor   :</label>     <!-- Modificar Memoria --> 
+        <input type="date" id="fecha4">                                   <!-- Modificar Memoria -->
+        <button onclick="guardarFecha(4, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Llaves combinadas SAE</label></div>
+        <div class=" refacciones"><label>Refaccion: Rodamientos </label></div>
+        <span class="dias-restantes" id="restantes4"></span>              <!-- Modificar Memoria -->
+        
+        <li> <strong>Matenimiento</strong> 5</li>
+        <label for="fecha5">Cambio de Aceite a Transmisión: </label>      <!-- Modificar Memoria -->
+        <input type="date" id="fecha5">                                   <!-- Modificar Memoria -->
+        <button onclick="guardarFecha(5, 24)">Guardar</button>
+        <div class=" herramientas"><label>Herramienta: Llaves combinadas SAE</label></div>
+        <div class=" refacciones"><label>Refaccion: Aceite ISO 220 grado alimenticio</label></div>
+        <span class="dias-restantes" id="restantes5"></span>              <!-- Modificar Memoria -->
+
+        <li> <strong>Matenimiento</strong> 6</li>
+        <label for="fecha6">Inspección de Nivel de Aceite  :</label>      <!-- Modificar Memoria -->
+        <input type="date" id="fecha6">                                   <!-- Modificar Memoria -->
+        <button onclick="guardarFecha(6, 3)">Guardar</button> 
+        <div class=" herramientas"><label>Herramienta: N/A</label></div>
+        <div class=" refacciones"><label>Refaccion:Aceite ISO 220 grado alimenticio </label></div>
+        <span class="dias-restantes" id="restantes6"></span>              <!-- Modificar Memoria -->
+
+        <li> <strong>Matenimiento</strong> 7</li>
+        <label for="fecha7">Cambio de Navaja y Cedazo:</label>
+        <input type="date" id="fecha7">
+        <button onclick="guardarFecha(7, 3)">Guardar</button>
+        <div class=" herramientas"><label>Herramienta: Herramienta de Operación para Extraer Navaja y Cedazo </label></div>
+        <div class=" refacciones"><label>Refaccion: Navaja y cedazo (número de parte por definir)</label></div>
+        <span class="dias-restantes" id="restantes7"></span>
+        
+        <li> <strong>Matenimiento</strong> 8</li>
+        <label for="fecha8">Inspección de Nivel de Aceite  :</label>    <!-- Modificar Memoria -->
+        <input type="date" id="fecha8">                               <!-- Modificar Memoria -->
+        <button onclick="guardarFecha(8, 60)">Guardar</button> 
+        <div class=" herramientas"><label>Herramienta: Llaves combinadas SAE</label></div>
+        <div class=" refacciones"><label>Refaccion: Gusano y Cabezal</label></div>
+        <span class="dias-restantes" id="restantes8"></span>          <!-- Modificar Memoria -->
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Maquina 3 -->
+<div id="maquinas">
+  <div class="maquina" id="maquina3">                                     <!-- Modificar Memoria -->
+    <h2>Rebanadora Automática Watanabe Super Big</h2>
+    <div class="flex-container">
+      <div class="caracteristicas">
+        <li>Nivel: 1</label>
+        <li>Voltaje: 220V</label>
+        <li>Fases: 3</label>
+        <li>Amperaje: 3.4A x 2</label>
+        <li>Potencia: 1hp x 2</label>
+        <!-- <label>Marca: The buffalo. John E, Smith Sons. Co.</label> -->
+        <li>Numero de Serie: Sin Placa</label>
+        <li>Usuario: Por Definir</label>
+      </div>
+      
+      <div class="fechas">
+        <li> <strong>Matenimiento</strong> 9</li>
+        <label for="fecha9">Cambio de Bandas a Transmisión de Disco Cortador:</label>                                   <!-- Modificar Memoria --> 
+        <input type="date" id="fecha9">                                    <!-- Modificar Memoria -->
+        <button onclick="guardarFecha(9, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Destonillador punta planta largo</label></div>
+        <div class=" refacciones"><label>Refaccion: 2 bandas B750Li</label></div>
+        <span class="dias-restantes" id="restantes9"></span>               <!-- Modificar Memoria -->  
+ 
+        <li> <strong>Matenimiento</strong> 10</li>
+        <label for="fecha10">Cambio de Bandas a Mecanismo de Deslice:</label>                                   <!-- Modificar Memoria --> 
+        <input type="date" id="fecha10">                                    <!-- Modificar Memoria -->
+        <button onclick="guardarFecha(10, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Destonillador Punta Planta Largo</label></div>
+        <div class=" refacciones"><label>Refaccion: 1 banda B750Li</label></div>
+        <span class="dias-restantes" id="restantes10"></span>               <!-- Modificar Memoria -->  
+        
+        <li> <strong>Matenimiento</strong> 11</li>
+        <label for="fecha11"> Cambio de Rodamientos a Disco Cortador:</label>                                <!-- Modificar Memoria --> 
+        <input type="date" id="fecha11">                                            <!-- Modificar Memoria -->
+        <button onclick="guardarFecha(11, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Llaves combinadas milimétricas</label></div>
+        <div class=" refacciones"><label>Refaccion: Por Definir</label></div>
+        <span class="dias-restantes" id="restantes11"></span>                       <!-- Modificar Memoria -->  
+
+        <li> <strong>Matenimiento</strong> 12</li>
+        <label for="fecha12"> Cambio de Rodamientos Motor Mecanismo de Deslice:</label>                                <!-- Modificar Memoria --> 
+        <input type="date" id="fecha12">                                            <!-- Modificar Memoria -->
+        <button onclick="guardarFecha(12, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Llaves Combinadas Milimétricas</label></div>
+        <div class=" refacciones"><label>Refaccion: Por Definir</label></div>
+        <span class="dias-restantes" id="restantes12"></span>        
+            
+        <li> <strong>Matenimiento</strong> 13</li>
+        <label for="fecha13">Cambio de Rodamientos a Motor de Disco Cortador</label>                                <!-- Modificar Memoria --> 
+        <input type="date" id="fecha13">                                            <!-- Modificar Memoria -->
+        <button onclick="guardarFecha(13, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Llaves combinadas milimétricas</label></div>
+        <div class=" refacciones"><label>Refaccion: Por Definir</label></div>
+        <span class="dias-restantes" id="restantes13"></span>           
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Maquina 4 -->
+<div id="maquinas">
+  <div class="maquina" id="maquina4">                                              <!-- Modificar Memoria -->
+    <h2>Embutidora Rex Technologie RVF 420</h2>
+    <div class="flex-container">
+      <div class="caracteristicas">
+        <li>Nivel: 1</label>
+        <li>Voltaje: 220V</label>
+        <li>Fases: 3</label>
+        <li>Amperaje: 3x35A</label>
+        <li>Potencia: 8kW</label>
+        <!-- <label>Marca: The buffalo. John E, Smith Sons. Co.</label> -->
+        <li>Numero de Serie: 42000170518</label>
+        <li>Usuario: Por Definir</label>
+      </div>
+      
+      <div class="fechas">
+        <li> <strong>Matenimiento</strong> 14</li>
+        <label for="fecha14"> Cambio de Aceite a Bomba de Vacío:</label><!-- Modificar Memoria --> 
+        <input type="date" id="fecha14"><!-- Modificar Memoria -->
+        <button onclick="guardarFecha(14, 12)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Llave Ajustable</label></div>
+        <div class=" refacciones"><label>Refaccion: Aceite BUSCH</label></div>
+        <span class="dias-restantes" id="restantes14"></span><!-- Modificar Memoria -->  
+      
+        <li> <strong>Matenimiento</strong> 15</li>
+        <label for="fecha15"> Cambio de Filtro de Succión Bomba de Vacío:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha15"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(15, 12)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Llave Ajustable</label></div>
+        <div class=" refacciones"><label>Refaccion: Filtro BUSCH (número de parte por definir)</label></div>
+        <span class="dias-restantes" id="restantes15"></span><!-- Modificar Memoria "restantes"-->  
+        
+        <li> <strong>Matenimiento</strong> 16</li>
+        <label for="fecha16"> Cambio de filtro de aceite a bomba de vacío:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha16"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(16, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Llave Ajustable</label></div>
+        <div class=" refacciones"><label>Refaccion:Filtro BUSCH (número de parte por definir) </label></div>
+        <span class="dias-restantes" id="restantes16"></span><!-- Modificar Memoria "restantes"-->  
+
+        <li> <strong>Matenimiento</strong> 17</li>
+        <label for="fecha17"> Cambio de Aceite a Sistema Hidráulico:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha17"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(17, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Llave Ajustable</label></div>
+        <div class=" refacciones"><label>Refaccion: Aceite ISO 32 (número de parte por definir)</label></div>
+        <span class="dias-restantes" id="restantes17"></span><!-- Modificar Memoria "restantes"-->  
+      
+        <li> <strong>Matenimiento</strong> 18</li>
+        <label for="fecha18"> Limpieza de filtro de aire:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha18"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(18,6 )">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Llaves Combinadas Milimétricas</label></div>
+        <div class=" refacciones"><label>Refaccion: </label></div>
+        <span class="dias-restantes" id="restantes18"></span><!-- Modificar Memoria "restantes"-->  
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Maquina 5 -->
+<div id="maquinas">
+  <div class="maquina" id="maquina5">                                              <!-- Modificar Memoria -->
+    <h2>Banda Transportadora Super Big</h2>
+    <div class="flex-container">
+      <div class="caracteristicas">
+        <li>Nivel: </label>
+        <li>Voltaje: 220V</label>
+        <li>Fases: 3</label>
+        <li>Amperaje: 3x35A</label>
+        <li>Potencia: 3hp</label>
+        <!-- <label>Marca: The buffalo. John E, Smith Sons. Co.</label> -->
+        <li>Numero de Serie: Sin placa</label>
+        <li>Usuario: Por Definir</label>
+      </div>
+      
+      <div class="fechas">
+        <li> <strong>Matenimiento</strong> 19</li>
+        <label for="fecha19"> Lubricación de 2 chumaceras de piso:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha19"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(19, 1)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Bomba para grasa</label></div>
+        <div class=" refacciones"><label>Refaccion: Grasa FM222 grado alimenticio</label></div>
+        <span class="dias-restantes" id="restantes19"></span><!-- Modificar Memoria "restantes"-->  
+        
+        <li> <strong>Matenimiento</strong> 20</li>
+        <label for="fecha20"> Mantenimiento:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha20"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(20, 1)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Bomba para grasa</label></div>
+        <div class=" refacciones"><label>Refaccion: Grasa FM222 grado alimenticio</label></div>
+        <span class="dias-restantes" id="restantes20"></span><!-- Modificar Memoria "restantes"-->  
+
+        <li> <strong>Matenimiento</strong> 21</li>
+        <label for="fecha21"> Cambio de banda:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha21"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(21, 12)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Destonillador punta planta largo</label></div>
+        <div class=" refacciones"><label>Refaccion: Banda A55</label></div>
+        <span class="dias-restantes" id="restantes21"></span><!-- Modificar Memoria "restantes"-->  
+
+        <li> <strong>Matenimiento</strong> 22</li>
+        <label for="fecha22"> Limpieza y lubricación de cadena:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha22"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(22, 1)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Brocha</label></div>
+        <div class=" refacciones"><label>Refaccion: WD40 y Grasa para cadenas base teflón</label></div>
+        <span class="dias-restantes" id="restantes22"></span><!-- Modificar Memoria "restantes"-->  
+
+        <li> <strong>Matenimiento</strong> 23</li>
+        <label for="fecha23"> Cambio de cadena:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha23"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(23, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Pinzas de punta</label></div>
+        <div class=" refacciones"><label>Refaccion: Por Definir</label></div>
+        <span class="dias-restantes" id="restantes23"></span><!-- Modificar Memoria "restantes"-->  
+
+        <li> <strong>Matenimiento</strong> 24</li>
+        <label for="fecha24"> Cambio de chumaceras de piso:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha24"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(24, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Llaves combinadas SAE</label></div>
+        <div class=" refacciones"><label>Refaccion: 2 chumaceras de piso ABB Dodge 123814 1 1/2"</label></div>
+        <span class="dias-restantes" id="restantes24"></span><!-- Modificar Memoria "restantes"-->  
+
+        <li> <strong>Matenimiento</strong> 25</li>
+        <label for="fecha25"> Cambio de chumaceras de corredera:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha25"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(25, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Llaves combinadas SAE</label></div>
+        <div class=" refacciones"><label>Refaccion: Por Definir</label></div>
+        <span class="dias-restantes" id="restantes25"></span><!-- Modificar Memoria "restantes"-->  
+
+        <li> <strong>Matenimiento</strong> 26</li>
+        <label for="fecha26"> Cambio de aceite a motoreductor:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha26"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(26, 12)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Llaves combinadas</label></div>
+        <div class=" refacciones"><label>Refaccion: Aceite ISO 220 grado alimenticio</label></div>
+        <span class="dias-restantes" id="restantes26"></span><!-- Modificar Memoria "restantes"-->  
+
+        <li> <strong>Matenimiento</strong> 27</li>
+        <label for="fecha27"> Cambio de rodamientos a motor:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha27"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(27, 12)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Llaves combinadas</label></div>
+        <div class=" refacciones"><label>Refaccion: Por definir</label></div>
+        <span class="dias-restantes" id="restantes27"></span><!-- Modificar Memoria "restantes"-->   
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Maquina 6 -->
+<div id="maquinas">
+  <div class="maquina" id="maquina6">                                              <!-- Modificar Memoria -->
+    <h2>Rebanadora Automática Watanabe Super Big</h2>
+    <div class="flex-container">
+      <div class="caracteristicas">
+        <li>Nivel: 1</label>
+        <li>Voltaje: 220V</label>
+        <li>Fases: 3</label>
+        <li>Amperaje: 3.4A x 2</label>
+        <li>Potencia: 1hp x 2</label>
+        <!-- <label>Marca: The buffalo. John E, Smith Sons. Co.</label> -->
+        <li>Numero de Serie: Sin Placa</label>
+        <li>Usuario: Por Definir</label>
+      </div>
+      
+      <div class="fechas">
+        <li> <strong>Matenimiento</strong> 28</li>
+        <label for="fecha28"> Cambio de Bandas a Transmisión de Disco Cortador:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha28"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(28, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Destonillador Punta Planta Largo</label></div>
+        <div class=" refacciones"><label>Refaccion: 2 bandas B750Li</label></div>
+        <span class="dias-restantes" id="restantes28"></span><!-- Modificar Memoria "restantes"-->  
+        
+        <li> <strong>Matenimiento</strong> 29</li>
+        <label for="fecha29"> Cambio de Bandas a Mecanismo de Deslice:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha29"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(29, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Destonillador Punta Planta Largo</label></div>
+        <div class=" refacciones"><label>Refaccion: 1 Banda B750Li</label></div>
+        <span class="dias-restantes" id="restantes29"></span><!-- Modificar Memoria "restantes"-->  
+
+        <li> <strong>Matenimiento</strong> 30</li>
+        <label for="fecha30"> Cambio de Rodamientos a Disco Cortador:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha30"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(30, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Llaves Combinadas Milimétricas</label></div>
+        <div class=" refacciones"><label>Refaccion: Por Definir</label></div>
+        <span class="dias-restantes" id="restantes30"></span><!-- Modificar Memoria "restantes"-->  
+
+        <li> <strong>Matenimiento</strong> 31</li>
+        <label for="fecha31"> Cambio de Rodamientos a Motor de Disco Cortador:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha31"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(31, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Llaves Combinadas Milimétricas</label></div>
+        <div class=" refacciones"><label>Refaccion: Por Definir</label></div>
+        <span class="dias-restantes" id="restantes31"></span><!-- Modificar Memoria "restantes"-->  
+
+        <li> <strong>Matenimiento</strong> 32</li>
+        <label for="fecha32"> Cambio Rodamientos a Motor Mecanismo Deslice:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha32"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(32, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Llaves Combinadas Milimétricas</label></div>
+        <div class=" refacciones"><label>Refaccion: Por Definir</label></div>
+        <span class="dias-restantes" id="restantes32"></span><!-- Modificar Memoria "restantes"-->  
+
+      </div>
+    </div>
+  </div>
+
+<!-- Maquina 7 -->
+<div id="maquinas">
+  <div class="maquina" id="maquina7">                                              <!-- Modificar Memoria -->
+    <h2>Rebanadora Automática Braher MG350</h2>
+    <div class="flex-container">
+      <div class="caracteristicas">
+        <li>Nivel: 1</label>
+        <li>Voltaje: 120V</label>
+        <li>Fases: 1</label>
+        <li>Amperaje: 200W</label>
+        <li>Potencia: 0.4hp</label>
+        <!-- <label>Marca: The buffalo. John E, Smith Sons. Co.</label> -->
+        <li>Numero de Serie: 157,174</label>
+        <li>Usuario: Por Definir</label>
+      </div>
+      
+      <div class="fechas">
+        <li> <strong>Matenimiento</strong> 33</li>
+        <label for="fecha33">Cambio de rodamientos a eje de disco corte:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha33"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(33, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Destonillador Punta Planta Largo</label></div>
+        <div class=" refacciones"><label>Refaccion: Por Definir</label></div>
+        <span class="dias-restantes" id="restantes33"></span><!-- Modificar Memoria "restantes"-->  
+
+        <li> <strong>Matenimiento</strong> 34</li>
+        <label for="fecha34">Cambio de Rodamientos a Motor:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha34"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(34, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Destonillador Punta Planta Largo</label></div>
+        <div class=" refacciones"><label>Refaccion: Por Definir</label></div>
+        <span class="dias-restantes" id="restantes34"></span><!-- Modificar Memoria "restantes"-->  
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Maquina 8 -->
+<div id="maquinas">
+  <div class="maquina" id="maquina8">                                              <!-- Modificar Memoria -->
+    <h2>Rebanadora Automática Braher MG350</h2>
+    <div class="flex-container">
+      <div class="caracteristicas">
+        <li>Nivel: 1</label>
+        <li>Voltaje: 120V</label>
+        <li>Fases: 1</label>
+        <li>Amperaje: 200W</label>
+        <li>Potencia: 0.4hp</label>
+        <!-- <label>Marca: The buffalo. John E, Smith Sons. Co.</label> -->
+        <li>Numero de Serie: 756,369</label>
+        <li>Usuario: Por Definir</label>
+      </div>
+      
+      <div class="fechas">
+        <li> <strong>Matenimiento</strong> 35</li>
+        <label for="fecha35"> Cambio de Rodamientos a Eje de Disco Corte:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha35"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(35, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Destonillador Punta Planta Largo</label></div>
+        <div class=" refacciones"><label>Refaccion: Por Definir</label></div>
+        <span class="dias-restantes" id="restantes35"></span><!-- Modificar Memoria "restantes"-->  
+      
+        <li> <strong>Matenimiento</strong> 36</li>
+        <label for="fecha36"> Cambio de Rodamientos a Motor:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha36"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(36, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Destonillador Punta Planta Largo</label></div>
+        <div class=" refacciones"><label>Refaccion: Por Definir</label></div>
+        <span class="dias-restantes" id="restantes36"></span><!-- Modificar Memoria "restantes"-->  
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Maquina 9(Basculas) -->
+<div id="maquinas">
+  <div class="maquina" id="maquina9"> <!-- Modificar Memoria "maquina" -->
+    <h2>Bascula 1 Excell TWH3</h2>
+    <div class="flex-container">
+      <div class="caracteristicas">
+        <li>Nivel: </label>
+        <li>Voltaje: 120V</label>
+        <li>Fases: 1</label>
+        <li>Amperaje: 10W</label>
+        <li>Potencia: 300kg</label>
+        <!-- <label>Marca: The buffalo. John E, Smith Sons. Co.</label> -->
+        <li>Numero de Serie: 406387</label>
+        <li>Usuario: Por Definir</label>
+      </div>
+      
+      <div class="fechas">
+        <li> <strong>Matenimiento</strong> 37</li>
+        <label for="fecha37">Limpieza de Celda de Carga y Display:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha37"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(37, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Brocha</label></div>
+        <div class=" refacciones"><label>Refaccion: Desengrasante dielectrico MAQUISA Dielectrol</label></div>
+        <span class="dias-restantes" id="restantes37"></span><!-- Modificar Memoria "restantes"-->  
+      
+        <li> <strong>Matenimiento</strong> 38</li>
+        <label for="fecha38">Verificación de Peso Con Pesas Patrón:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha38"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(38, 1)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Pesas Patrón</label></div>
+        <div class=" refacciones"><label>Refaccion: Pesas Patrón</label></div>
+        <span class="dias-restantes" id="restantes38"></span><!-- Modificar Memoria "restantes"-->  
+
+        <li> <strong>Matenimiento</strong> 39</li>
+        <label for="fecha39"> Calibración Anual:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha39"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(39, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Pesas Patrón</label></div>
+        <div class=" refacciones"><label>Refaccion: Pesas Patrón</label></div>
+        <span class="dias-restantes" id="restantes39"></span><!-- Modificar Memoria "restantes"-->  
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Maquina 10 (Basculas) -->
+<div id="maquinas">
+  <div class="maquina" id="maquina10"> <!-- Modificar Memoria "maquina" -->
+    <h2>Bascula 2 Excell TWH3</h2>
+    <div class="flex-container">
+      <div class="caracteristicas">
+        <li>Nivel: 1</label>
+        <li>Voltaje: 120V</label>
+        <li>Fases: 1</label>
+        <li>Amperaje: 10W</label>
+        <li>Potencia: 300kg</label>
+        <!-- <label>Marca: The buffalo. John E, Smith Sons. Co.</label> -->
+        <li>Numero de Serie: 406387</label>
+        <li>Usuario: Por Definir</label>
+      </div>
+      
+      <div class="fechas">
+        <li> <strong>Matenimiento</strong> 40</li>
+        <label for="fecha40">Limpieza de Celda de Carga y Display:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha40"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(40, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Brocha</label></div>
+        <div class=" refacciones"><label>Refaccion: Desengrasante dielectrico MAQUISA Dielectrol</label></div>
+        <span class="dias-restantes" id="restantes40"></span><!-- Modificar Memoria "restantes"-->  
+      
+        <li> <strong>Matenimiento</strong> 41</li>
+        <label for="fecha41">Verificación de Peso Con Pesas Patrón:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha41"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(41, 1)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Pesas Patrón</label></div>
+        <div class=" refacciones"><label>Refaccion: Pesas Patrón</label></div>
+        <span class="dias-restantes" id="restantes41"></span><!-- Modificar Memoria "restantes"-->  
+
+        <li> <strong>Matenimiento</strong> 42</li>
+        <label for="fecha42"> Calibración Anual:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha42"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(42, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Pesas Patrón</label></div>
+        <div class=" refacciones"><label>Refaccion: Pesas Patrón</label></div>
+        <span class="dias-restantes" id="restantes42"></span><!-- Modificar Memoria "restantes"-->  
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Maquina 11(Basculas) -->
+<div id="maquinas">
+  <div class="maquina" id="maquina11"> <!-- Modificar Memoria "maquina" -->
+    <h2>Bascula 3 Excell TWH3</h2>
+    <div class="flex-container">
+      <div class="caracteristicas">
+        <li>Nivel: 1</label>
+        <li>Voltaje: 120V</label>
+        <li>Fases: 1</label>
+        <li>Amperaje: 10W</label>
+        <li>Potencia: 300kg</label>
+        <!-- <label>Marca: The buffalo. John E, Smith Sons. Co.</label> -->
+        <li>Numero de Serie: 406387</label>
+        <li>Usuario: Por Definir</label>
+      </div>
+      
+      <div class="fechas">
+        <li> <strong>Matenimiento</strong> 43</li>
+        <label for="fecha43">Limpieza de Celda de Carga y Display:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha43"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(43, 24)">Guardar</button>  
+        <div class="herramientas"><label>Herramienta: Brocha</label></div>
+        <div class="refacciones"><label>Refaccion: Desengrasante dielectrico MAQUISA Dielectrol</label></div>
+        <span class="dias-restantes" id="restantes43"></span><!-- Modificar Memoria "restantes"-->  
+      
+        <li> <strong>Matenimiento</strong> 44</li>
+        <label for="fecha44">Verificación de Peso Con Pesas Patrón:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha44"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(44, 1)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Pesas Patrón</label></div>
+        <div class=" refacciones"><label>Refaccion: Pesas Patrón</label></div>
+        <span class="dias-restantes" id="restantes44"></span><!-- Modificar Memoria "restantes"-->  
+
+        <li> <strong>Matenimiento</strong> 45</li>
+        <label for="fecha45"> Calibración Anual:</label><!-- Modificar Memoria "fecha" --> 
+        <input type="date" id="fecha45"><!-- Modificar Memoria "fecha" -->
+        <button onclick="guardarFecha(45, 24)">Guardar</button>  
+        <div class=" herramientas"><label>Herramienta: Pesas Patrón</label></div>
+        <div class=" refacciones"><label>Refaccion: Pesas Patrón</label></div>
+        <span class="dias-restantes" id="restantes45"></span><!-- Modificar Memoria "restantes"-->  
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin de Maquinas -->
+<div id="footer">
+  <p id="currentDate"></p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

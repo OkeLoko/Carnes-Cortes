@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestión de Mantenimiento de Máquinas</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1>Gestión de Mantenimiento</h1>
+<div id="maquinas">
+  <div class="maquina" id="maquina1">
+    <h2>Molino</h2>
+    
+    <label for="fecha1">Cambio De Estoperos:</label>
+    <input type="date" id="fecha1">
+    <button onclick="guardarFecha(1, 24)">Guardar</button>
+    <span class="dias-restantes" id="restantes1"></span>
+    
+    <label for="fecha2">Lubricación de 6 cojinetes:</label>
+    <input type="date" id="fecha2">
+    <button onclick="guardarFecha(2, 1)">Guardar</button>
+    <span class="dias-restantes" id="restantes2"></span>
+    
+    
+    <label for="fecha2">Cambio de rodamientos/Bujes:</label>
+    <input type="date" id="fecha3">
+    <button onclick="guardarFecha(3, 24)">Guardar</button>
+    <span class="dias-restantes" id="restantes3"></span>
+
+    <div class="caracteristicas">
+      <label>Nivel: 2</label>
+      <label>Voltaje: 220V</label>
+      <label>Fases: 3 </label>
+      <label>Amperaje: Null</label>
+      <label>Potencia: 15 hp Aprox</label>
+      <label>Marca: The buffalo. John E, Smith Sons. Co.</label>
+      <label>Numero de Serie: 4</label>
+      <label>Usuario: Null </label>
+      
+    </div>
+</div>
+
+
+<div id="footer">
+  <p id="currentDate"></p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

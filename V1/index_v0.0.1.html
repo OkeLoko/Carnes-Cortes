@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestión de Rentas de Departamentos</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Gestión de Pagos</h1>
+<div id="departamentos">
+  <div class="departamento" id="depto1">
+    <h2>Departamento Christian</h2>
+    <input type="date" id="fecha1">
+    <button onclick="guardarFecha(1)">Guardar</button>
+    <span class="dias-restantes" id="restantes1"></span>
+  </div>
+  <div class="departamento" id="depto2">
+    <h2>Departamento Jesus</h2>
+    <input type="date" id="fecha2">
+    <button onclick="guardarFecha(2)">Guardar</button>
+    <span class="dias-restantes" id="restantes2"></span>
+  </div>
+  <div class="departamento" id="depto3">
+    <h2>Departamento 3</h2>
+    <input type="date" id="fecha3">
+    <button onclick="guardarFecha(3)">Guardar</button>
+    <span class="dias-restantes" id="restantes3"></span>
+  </div>
+  <div class="departamento" id="depto4">
+    <h2>Departamento 4</h2>
+    <input type="date" id="fecha4">
+    <button onclick="guardarFecha(4)">Guardar</button>
+    <span class="dias-restantes" id="restantes4"></span>
+  </div>
+</div>
+<div id="footer">
+  <p id="currentDate"></p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
