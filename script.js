@@ -90,7 +90,7 @@ function mostrarFechaActual() {
   document.getElementById('currentDate').textContent = `Fecha: ${formattedDate}`;
 }
 // Login and key management code
-const masterKey = localStorage.getItem('masterKey') || ''; // &3wE7R_P
+const masterKey = localStorage.getItem('masterKey') || '';
 
 function login() {
   const keyInput = document.getElementById('loginKey').value;
@@ -104,3 +104,4 @@ function login() {
 }
 
 console.log("By: Rene Oke");
+console.log("Version 2.1.0");
