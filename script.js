@@ -6,7 +6,7 @@ window.onload = function() {
 };
 
 function cargarFechas() {
-  for (let i = 1; i <= 50; i++) {
+  for (let i = 1; i <= 45; i++) {
     const fecha = localStorage.getItem('fecha' + i);
     if (fecha) {
       document.getElementById('fecha' + i).value = fecha;
@@ -16,7 +16,7 @@ function cargarFechas() {
 }
 
 function cargarCaracteristicas() {
-  for (let i = 1; i <= 50; i++) {
+  for (let i = 1; i <= 45; i++) {
     ['usuario'].forEach(attr => {
       const value = localStorage.getItem(attr + i);
       if (value) {
